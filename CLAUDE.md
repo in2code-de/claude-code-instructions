@@ -5,6 +5,11 @@
 - Nutze die vorhandene .editorconfig für Einrückung und Formatierung
 - Orientiere dich am Stil existierender Dateien im Projekt
 - Nutze ausschließlich `'` für Strings in PHP
+- Achte auf Typensicherheit
+- Nutze lieber `$variable === false` an Stelle von `!$variable`
+- Vermeide early returns in PHP-Funktionen
+- Vermeide globale Exceptions (z.B. RuntimeException) und implementiere eigene Exceptions
+- Globale catch sollen auf \Throwable und nicht auf \Exception "hören"
 
 ## Code Quality & Clean Code
 - Vermeide Code Smells wie:
@@ -18,6 +23,7 @@
 - Single Responsibility Principle beachten
 - DRY-Prinzip: Extrahiere wiederholten Code in Methoden/Services
 - Komplexität reduzieren: Early Returns statt verschachtelte If-Blöcke
+- Vermeide Inline Kommentare und nutze lieber lesbare Funktions- und Variablennamen
 
 ## TYPO3 Spezifisch
 - Verwende TYPO3 Coding Guidelines (für PHP siehe https://docs.typo3.org/m/typo3/reference-coreapi/main/en-us/CodingGuidelines/CglPhp/GeneralRequirementsForPhpFiles.html#general-requirements-for-php-files)
