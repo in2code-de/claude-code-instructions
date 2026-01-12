@@ -10,6 +10,9 @@
 - Vermeide early returns in PHP-Funktionen
 - Vermeide globale Exceptions (z.B. RuntimeException) und implementiere eigene Exceptions
 - Globale catch sollen auf \Throwable und nicht auf \Exception "hören"
+- Benutze Konstanten für zentrale Werte (z.B. Limits, konstante Werte in der Datenbank, etc...)
+- Verwende enum wenn sinnvoll
+- Vermeide FQN wo möglich
 
 ## Code Quality & Clean Code
 - Vermeide Code Smells wie:
