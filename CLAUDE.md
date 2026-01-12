@@ -28,6 +28,8 @@
 - Vermeide die Verwendung von `$GLOBALS['TSFE']`
 - PHP-Logik sollte sich immer zentral und im Verzeichnis `Classes/Domain/` (oder Unterordner) befinden
 - Verwende bitte bevorzugt Dependency Injection über `__construct()`
+- Benutze `defined('TYPO3') || die();` an Stelle von `defined('TYPO3') or die();` in `ext_tables.php` und `ext_localconf.php`
+- Vermeide die Definition von Tabellenfeldern in `ext_tables.sql` wenn im TCA definiert da diese automatisch von TYPO3 erzeugt werden (außer SQL Index wird benötigt)
 
 ## TYPO3 Anti-Patterns (vermeiden!)
 - Geschäftslogik in Templates (Fluid)
