@@ -33,7 +33,7 @@
 - Nutze moderne Extbase/Fluid Patterns
 - Doctrine DBAL statt deprecated DB-Queries
 - Verfolge das Prinzip eines Slim Controllers
-- Verwende `RequestFactory` statt `GeneralUtility::getUrl()` (siehe https://docs.typo3.org/m/typo3/reference-coreapi/main/en-us/ExtensionArchitecture/HowTo/RestRequests/Index.html)
+- Verwende `RequestFactory` statt `GeneralUtility::getUrl()` oder `curl_setopt()` (siehe https://docs.typo3.org/m/typo3/reference-coreapi/main/en-us/ExtensionArchitecture/HowTo/RestRequests/Index.html)
 - Vermeide die Verwendung von `$GLOBALS['TSFE']`
 - PHP-Logik sollte sich immer zentral und im Verzeichnis `Classes/Domain/` (oder Unterordner) befinden
 - Verwende bitte bevorzugt Dependency Injection über `__construct()`
