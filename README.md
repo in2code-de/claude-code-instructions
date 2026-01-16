@@ -6,6 +6,8 @@ Dieses Repository enthält standardisierte Anweisungen und Coding Guidelines fü
 
 ### Globale Installation (empfohlen)
 
+#### CLAUDE CODE
+
 Die `CLAUDE.md` Datei kann global als `~/.claude/CLAUDE.md` abgelegt werden. Diese globale Konfiguration wird dann für alle Claude Code Sessions verwendet:
 
 ```bash
@@ -13,6 +15,10 @@ git clone https://github.com/in2code-de/claude-code-instructions.git
 mkdir -p ~/.claude
 cp claude-code-instructions/CLAUDE.md ~/.claude/CLAUDE.md
 ```
+
+#### GEMINI CLI
+
+Ähnlich wie bei Claude wird eine `~/.gemini/GEMINI.md` benötigt. Details siehe oben.
 
 ### Projekt-spezifische Installation (optional)
 
