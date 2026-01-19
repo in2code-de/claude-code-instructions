@@ -30,6 +30,7 @@
 
 ## TYPO3 Spezifisch
 - Verwende TYPO3 Coding Guidelines (für PHP siehe https://docs.typo3.org/m/typo3/reference-coreapi/main/en-us/CodingGuidelines/CglPhp/GeneralRequirementsForPhpFiles.html#general-requirements-for-php-files)
+- Orientiere dich am Code der TYPO3 Pakete für Stil und Format
 - Nutze moderne Extbase/Fluid Patterns
 - Doctrine DBAL statt deprecated DB-Queries
 - Verfolge das Prinzip eines Slim Controllers
@@ -39,6 +40,7 @@
 - Verwende bitte bevorzugt Dependency Injection über `__construct()`
 - Benutze `defined('TYPO3') || die();` an Stelle von `defined('TYPO3') or die();` in `ext_tables.php` und `ext_localconf.php`
 - Vermeide die Definition von Tabellenfeldern in `ext_tables.sql` wenn im TCA definiert da diese automatisch von TYPO3 erzeugt werden (außer SQL Index wird benötigt)
+- Nutze `GeneralUtility::cmpIP()` für IP-Ranges und keine unnötigen PHP Pakete von packagist.org
 
 ## TYPO3 Anti-Patterns (vermeiden!)
 - Geschäftslogik in Templates (Fluid)
@@ -46,15 +48,21 @@
 - Statische Utility-Aufrufe wo DI möglich ist
 - SQL-Queries außerhalb von Repositories
 - Unterdrückte Errors mit `@`
+- Boolische Funktionen sollen immer positiv beschrieben werden, selbst wenn auf das negative Ergebnis abgefragt wird: `isRecordExisting() === false`
 
 ## Best Practices
 - Schreibe aussagekräftige Commit Messages (Conventional Commits) und orientiere dich am Stil vorhandener Commit Messages
 - Dokumentiere komplexe Logik inline
 - Keine hardkodierten Strings - nutze XLIFF
 - Unit Tests für neue Business Logic
+- Benutze bereits vorhandene TYPO3 Funktionen oder PHP Pakete wenn möglich
+- Benutze fertige PHP-Pakete von packagist.org in der composer.json wenn größere Funktionen dort bereits verfügbar sind
+- Schreibe automatisierte Tests für die neuen Funktionen wenn bereits ähnliche Tests vorhanden sind
 
 ## Workflow
 - Prüfe existierende Code-Patterns vor neuen Implementierungen
 - Frage bei Architektur-Entscheidungen nach, bevor du Code schreibst
 - Bevorzuge Refactoring vor Feature-Additions
 - Weise auf bestehende Code Smells hin, wenn du sie beim Arbeiten entdeckst
+- Wenn in einem Projekt keine `README.md` existiert, bitte auf `readme.md` prüfen
+- Dokumentation befindet sich in der Regel unter `Documentation/` oder `docs/`
