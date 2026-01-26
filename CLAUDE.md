@@ -13,6 +13,7 @@
 - Benutze Konstanten für zentrale Werte (z.B. Limits, konstante Werte in der Datenbank, etc...)
 - Verwende enum wenn sinnvoll
 - Vermeide FQN wo möglich
+- Bei der Nutzung von RegEx: Nutze `~` als Delimiter
 
 ## Code Quality & Clean Code
 - Vermeide Code Smells wie:
@@ -25,8 +26,9 @@
 - Bevorzuge sprechende Variable- und Methodennamen
 - Single Responsibility Principle beachten
 - DRY-Prinzip: Extrahiere wiederholten Code in Methoden/Services
-- Komplexität reduzieren: Early Returns statt verschachtelte If-Blöcke
+- Keine Early Returns - lieber einen If-Block und am Ende ein Return
 - Vermeide Inline Kommentare und nutze lieber lesbare Funktions- und Variablennamen
+- Nutze das Paradigma "Single source of truth" und vermeide es, gleiche Funktionen mehrfach zu schreiben
 
 ## TYPO3 Spezifisch
 - Verwende TYPO3 Coding Guidelines (für PHP siehe https://docs.typo3.org/m/typo3/reference-coreapi/main/en-us/CodingGuidelines/CglPhp/GeneralRequirementsForPhpFiles.html#general-requirements-for-php-files)
@@ -41,6 +43,7 @@
 - Benutze `defined('TYPO3') || die();` an Stelle von `defined('TYPO3') or die();` in `ext_tables.php` und `ext_localconf.php`
 - Vermeide die Definition von Tabellenfeldern in `ext_tables.sql` wenn im TCA definiert da diese automatisch von TYPO3 erzeugt werden (außer SQL Index wird benötigt)
 - Nutze `GeneralUtility::cmpIP()` für IP-Ranges und keine unnötigen PHP Pakete von packagist.org
+- Nutze `GeneralUtility::getFileAbsFileName()` für absolute Pfade zu Dateien
 
 ## TYPO3 Anti-Patterns (vermeiden!)
 - Geschäftslogik in Templates (Fluid)
@@ -64,5 +67,6 @@
 - Frage bei Architektur-Entscheidungen nach, bevor du Code schreibst
 - Bevorzuge Refactoring vor Feature-Additions
 - Weise auf bestehende Code Smells hin, wenn du sie beim Arbeiten entdeckst
+- Lösche den Cache über die CLI wenn du größere Änderungen gemacht hast
 - Wenn in einem Projekt keine `README.md` existiert, bitte auf `readme.md` prüfen
 - Dokumentation befindet sich in der Regel unter `Documentation/` oder `docs/`
