@@ -11,6 +11,7 @@
 - Vermeide globale Exceptions (z.B. RuntimeException) und implementiere eigene Exceptions
 - Globale catch sollen auf \Throwable und nicht auf \Exception "hören"
 - Benutze Konstanten für zentrale Werte (z.B. Limits, konstante Werte in der Datenbank, etc...)
+- Falls es die PHP-Version erlaubt (siehe Haupt composer.json), dann nutze die Definition vom Datentyp für Konstanten `private const string TABLE_NAME = 'tt_content';`
 - Verwende enum wenn sinnvoll
 - Vermeide FQN wo möglich
 - Bei der Nutzung von RegEx: Nutze `~` als Delimiter
@@ -28,6 +29,7 @@
 - DRY-Prinzip: Extrahiere wiederholten Code in Methoden/Services
 - Keine Early Returns - lieber einen If-Block und am Ende ein Return
 - Vermeide Inline Kommentare und nutze lieber lesbare Funktions- und Variablennamen
+- Falls Kommentare vereinzelt nötig sind, nutze immer die englische Sprache
 - Nutze das Paradigma "Single source of truth" und vermeide es, gleiche Funktionen mehrfach zu schreiben
 
 ## TYPO3 Spezifisch
