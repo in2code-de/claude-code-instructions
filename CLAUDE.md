@@ -46,6 +46,7 @@
 - Vermeide die Definition von Tabellenfeldern in `ext_tables.sql` wenn im TCA definiert da diese automatisch von TYPO3 erzeugt werden (außer SQL Index wird benötigt)
 - Nutze `GeneralUtility::cmpIP()` für IP-Ranges und keine unnötigen PHP Pakete von packagist.org
 - Nutze `GeneralUtility::getFileAbsFileName()` für absolute Pfade zu Dateien
+- Nutze zum String-Parsen (falls nötig) "t3://page?uid=123" `TYPO3\CMS\Core\LinkHandling\LinkService->resolve()`
 
 ## TYPO3 Anti-Patterns (vermeiden!)
 - Geschäftslogik in Templates (Fluid)
