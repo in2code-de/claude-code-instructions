@@ -47,6 +47,7 @@
 - Nutze `GeneralUtility::cmpIP()` für IP-Ranges und keine unnötigen PHP Pakete von packagist.org
 - Nutze `GeneralUtility::getFileAbsFileName()` für absolute Pfade zu Dateien
 - Nutze zum String-Parsen (falls nötig) "t3://page?uid=123" `TYPO3\CMS\Core\LinkHandling\LinkService->resolve()`
+- Wenn Änderungen in der `locallang.xlf` oder `locallang_db.xlf` gemacht werden, beachte auch immer mögliche Übersetzungen (Präfix mit Sprachkennung: Z.B. `de.locallang.xlf`)
 
 ## TYPO3 Anti-Patterns (vermeiden!)
 - Geschäftslogik in Templates (Fluid)
