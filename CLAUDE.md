@@ -15,6 +15,7 @@
 - Verwende enum wenn sinnvoll
 - Vermeide FQN wo möglich
 - Bei der Nutzung von RegEx: Nutze `~` als Delimiter
+- Nutze immer `PHP_EOL` an Stelle von `"\n`
 
 ## Code Quality & Clean Code
 - Vermeide Code Smells wie:
