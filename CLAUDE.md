@@ -58,6 +58,9 @@
 - Unterdrückte Errors mit `@`
 - Boolische Funktionen sollen immer positiv beschrieben werden, selbst wenn auf das negative Ergebnis abgefragt wird: `isRecordExisting() === false`
 
+## SQL
+- Nutze lieber `ExtracValue()` oder `UpdateXML()` an Stelle alternativer Methoden via Regex wenn es um XML in der Datenbank geht (z.B. FlexForm)
+
 ## Best Practices
 - Schreibe aussagekräftige Commit Messages (Conventional Commits) und orientiere dich am Stil vorhandener Commit Messages
 - Dokumentiere komplexe Logik inline
